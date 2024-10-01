@@ -1,0 +1,333 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+    catalog
+{% endblock %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <div class="container">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__list-item">
+        <a href="#">Главная</a>
+      </li>
+      <li class="breadcrumbs__list-item">
+        <a href="#">Гидроциклы</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+
+  <section class="catalog">
+    <div class="container">
+      <h2 class="catalog__title">Гидроциклы</h2>
+      <div class="catalog__filtor">
+        <div class="catalog__filtor-items">
+          <button>Полноприводные</button>
+          <button>от 5000</button>
+          <button>BRP</button>
+          <button>еще</button>
+        </div>
+        <div class="catalog__filtor-btn">
+          <select class="filter-stayle select__item">
+            <option>По полулярности</option>
+            <option>Дешевле</option>
+            <option>Дороже</option>
+          </select>
+          <button class="catalog__filtor-btngrid catalog__filtor-button catalog__filtor-button-active">
+            <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="21" height="19" stroke="#2F3035" stroke-width="2"/>
+              <rect x="7" y="6" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
+              <rect x="7" y="13" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
+              <rect x="14" y="6" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
+              <rect x="14" y="13" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
+              </svg>
+          </button>
+          <button class="catalog__filtor-btnline catalog__filtor-button">
+            <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="1">
+              <rect x="6" width="19" height="3" rx="1.5" fill="#2F3035"/>
+              <rect x="6" y="8" width="19" height="3" rx="1.5" fill="#2F3035"/>
+              <rect x="6" y="16" width="19" height="3" rx="1.5" fill="#2F3035"/>
+              <rect width="3" height="3" rx="1.5" fill="#2F3035"/>
+              <rect y="8" width="3" height="3" rx="1.5" fill="#2F3035"/>
+              <rect y="16" width="3" height="3" rx="1.5" fill="#2F3035"/>
+              </g>
+              </svg>
+          </button>
+        </div>
+      </div>
+      <div class="catalog__inner">
+        <aside class="catalog__inner-aside asise-filter">
+           <div class="tabs__wrapper">
+                <div class="tabs asise-filter__tabs">
+                  <a href="#filter-1" class="tab asise-filter__tab tab--active"><span>Параметры</span></a>
+                  <a href="#filter-2" class="tab asise-filter__tab"><span>По марке</span></a>
+                </div>
+                <div class="tabs__container">
+                  <div id="filter-1" class="tabs__content asise-filter__tabs-content tabs__content--active">
+                    <form class="asise-filter__form">
+                      <ul class="asise-filter__list">
+                        <li class="asise-filter__item-drop">
+                          <p class="asise-filter__item-title filter__item-drop filter__item-drop--active">Наличие</p>
+                          <div class="asise-filter__content">
+                            <div class="asise-filter__content-box">
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              В наличие
+                            </label>
+                          </div>
+                            <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              Под заказ
+                            </label>
+                          </div>
+                          </div>
+                        </li>
+                        <li class="asise-filter__item-drop">
+                          <p class="asise-filter__item-title filter__item-drop filter__item-drop--active">Новинки</p>
+                          <div class="asise-filter__content asise-filter__content-radio">
+                            <div class="asise-filter__content-box">
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" name="radio" type="radio">
+                               Все
+                            </label>
+                          </div>
+                            <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" name="radio" type="radio">
+                              Новинки
+                            </label>
+                          </div>
+                          <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" name="radio" type="radio">
+                              Акции
+                            </label>
+                          </div>
+                          </div>
+                        </li>
+                        <li class="asise-filter__item-drop">
+                          <p class="asise-filter__item-title filter__item-drop filter__item-drop--active">Цена</p>
+                          <div class="asise-filter__content">
+                            <input type="text" class="js-range-slider" name="my_range" value=""
+                            data-min="100000"
+                            data-max="500000"
+                            data-from="150000"
+                            data-to="275000"/>
+                          </div>
+                        </li>
+                        <li class="asise-filter__item-list">
+                          <div class="filter__item-list">
+                            <p class="filter__item-listtitle">
+                              Мощность, л.с.
+                            </p>
+                            <select class="filter-stayle filter__item-listselect">
+                              <option>90</option>
+                              <option>130</option>
+                              <option>154</option>
+                              <option>230</option>
+                            </select>
+                          </div>
+                          <div class="filter__item-list">
+                            <p class="filter__item-listtitle">
+                              Мощность двигателя, л.с.
+                            </p>
+                            <select class="filter-stayle filter__item-listselect">
+                              <option>90</option>
+                              <option>130</option>
+                              <option>154</option>
+                              <option>230</option>
+                            </select>
+                          </div>
+                          <div class="filter__item-list">
+                            <p class="filter__item-listtitle">
+                              Макс. скорость
+                            </p>
+                            <select class="filter-stayle filter__item-listselect">
+                              <option>90</option>
+                              <option>130</option>
+                              <option>154</option>
+                              <option>230</option>
+                            </select>
+                          </div>
+                        </li>
+                        <li class="asise-filter__item-drop">
+                          <p class="asise-filter__item-title filter__item-drop filter__item-drop--active">Бренд</p>
+                          <div class="asise-filter__content">
+                            <div class="asise-filter__content-box">
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              BRP
+                            </label>
+                          </div>
+                            <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              Spark 2
+                            </label>
+                          </div>
+                          <div class="asise-filter__content-box">
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              Spark 3 
+                            </label>
+                          </div>
+                          <div class="filter__more">
+                            <button class="filter__more-btn">Показать еще</button>
+                          </div>
+                        </div>
+                        </li>
+                        <li class="asise-filter__item-drop">
+                          <p class="asise-filter__item-title filter__item-drop filter__item-drop--active">Модель</p>
+                          <div class="asise-filter__content">
+                            <input type="text" class="filter__search" placeholder="Введите модель ">
+                            <div class="asise-filter__content-box">
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              Sea-doo Spark 2
+                            </label>
+                          </div>
+                            <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              SeaDoo Spark 90 
+                            </label>
+                          </div>
+                          <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              SeaDoo GTI 155
+                            </label>
+                          </div>
+                          <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              SeaDoo GTR 230
+                            </label>
+                          </div>
+                          <div class="filter__more">
+                            <button class="filter__more-btn">Показать еще</button>
+                          </div>
+                          </div>
+                        </li>
+                        <li class="asise-filter__item-drop btn__cheked">
+                          <p class="asise-filter__item-title filter__item-drop filter__item-drop--active">Акции</p>
+                          <div class="asise-filter__content">
+                            <div class="asise-filter__content-box">
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              <span class="btn__cheked-text">SALE</span> 
+                            </label>
+                          </div>
+                            <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              <span class="btn__cheked-text">NEW</span> 
+                            </label>
+                          </div>
+                          <div class="asise-filter__content-box">
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              <span class="btn__cheked-text">HIT</span> 
+                            </label>
+                          </div>
+                            <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              <span class="btn__cheked-text">ДИЛЕР</span> 
+                            </label>
+                          </div>
+                          </div>
+                        </li>
+                        <li class="asise-filter__item-drop">
+                          <p class="asise-filter__item-title filter__item-drop filter__item-drop--active">Страны</p>
+                          <div class="asise-filter__content">
+                            <div class="asise-filter__content-box">
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              Россия
+                            </label>
+                          </div>
+                            <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              Германия
+                            </label>
+                          </div>
+                          <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              Китай
+                            </label>
+                          </div>
+                          <div class="asise-filter__content-box">  
+                            <label class="asise-filter__content-label">
+                              <input class="filter-stayle" type="checkbox">
+                              CША
+                            </label>
+                          </div>
+                          <div class="filter__more">
+                            <button class="filter__more-btn">Показать еще</button>
+                          </div>
+                          </div>
+                        </li>
+                        <li class="asise-filter__item-drop asise-filter__item-btn">
+                          <button type="submit" class="filtr__btn-send filtr__btn-send--active">ВЫБРАТЬ</button>
+                          <p class="filtr__extra">Дополнительные параметры</p>
+                          <div class="filtr__extra-content">more</div>
+                          <button type="submit" class="filtr__btn-reset">Сбросить фильтр</button>
+                        </li>
+                      </ul>
+                    </form>
+                  </div>
+                  <div id="filter-2" class="tabs__content asise-filter__tabs-content">Информация обновляется</div>
+                </div>
+              </div>
+        </aside>
+        <div class="catalog__inner-list">
+          {% for product in products %}
+              <div class="product__item-wrapper">
+              {%if product.variants.first.quantity == 0 %}
+                <a href="product-page.html" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+              {% endif %}
+              <a href="product-page.html" class="product__item">
+              <p class="product__item-hover-text"> </p>
+              <button class="product__item-favorite"></button>
+              <img src={% static "images/content/gidrotsikl-1.png" %} alt="" class="product__item-img">
+              <h4 class="product__item-title">{{ product.name }}</h4>
+              {% if product.variants.first.sale.is_active %}
+                <p class="price product__item-price">{{ product.variants.first.discounted_price|floatformat:"0"}} ₽</p>
+              {% else %}
+                <p class="price product__item-price">{{ product.variants.first.get_price_in_rub|floatformat:"0"}} ₽</p>
+              {% endif %}
+              {% if product.variants.first.quantity %}
+                <p class="product__item-notify-text">количество: {{ product.variants.first.quantity }}</p>
+              {% else %}
+                <p class="product__item-notify-text">нет в наличие  </p>
+              {% endif %}
+              <button class="product__item-basket">
+                <img src={% static "images/basket-white.svg" %} alt="">
+              </button>
+              </a>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__list-item active"><a href="#">1</a></li>
+              <li class="pagination__list-item"><a href="#">2</a></li>
+              <li class="pagination__list-item"><a href="#">3</a></li>
+              <li class="pagination__list-item"><a href="#">4</a></li>
+              <li class="pagination__list-item"><a href="#">5</a></li>
+              <li class="pagination__list-item pagination__list-item--dots"><span>...</span></li>
+              <li class="pagination__list-item"><a href="#">11</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+{% endblock %}

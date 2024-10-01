@@ -1,0 +1,465 @@
+{% extends 'core/base.html'%}
+
+{% block title %}
+    product
+{% endblock %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <div class="container">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__list-item">
+        <a href="#">Главная</a>
+      </li>
+      <li class="breadcrumbs__list-item">
+        <a href="#">Гидроциклы</a>
+      </li>
+      <li class="breadcrumbs__list-item">
+        <span>Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<section class="product__card">
+  <div class="container">
+    <div class="product__card-inner">
+      <div class="product__card-img-box product__item--sale">
+        <img src="images/content/gidrotsikl-larg.png" alt="" class="product__card-img">
+        <p class="product__card-price-old">1 200 475 ₽</p>
+        <p class="product__card-price-new">1 100 475 ₽</p>
+        <a href="#" class="product__card-link">Нашли дешевле? Снизим цену! </a>
+      </div>
+      <div class="product__card-content">
+        <h1 class="product__card-title">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h1>
+        <p class="product__card-code">
+          Код товара: 	366666-2 
+        </p>
+        <div class="product__card__buttons">
+          <a class="product__card-icon-favorite" href="#">
+            <img src="images/heard.svg" alt="">
+          </a>
+          <a class="product__card-icon-compasion" href="#">
+            <img src="images/compasion.svg" alt="">
+          </a>
+          <a href="#!" class="rate">
+            <div class="rateYo " data-rateyo-rating = "4"></div>
+          </a>
+        </div>
+            <div class="tabs__wrapper product__card-tabs">
+          <div class="tabs">
+            <a href="#product-1" class="tab product__card-tab tab--active">Характеристики</a>
+            <a href="#product-2" class="tab product__card-tab">Наличие в магазине</a>
+          </div>
+          <div class="tabs__container">
+            <div id="product-1" class="tabs__content product__card-tab-content tabs__content--active">
+              <ul class="product__card-list">
+                <li class="product__card-item">
+                  <div class="product__card-left">Производитель</div>
+                  <div class="product__card-right">Канада</div>
+                </li>
+                <li class="product__card-item">
+                  <div class="product__card-left">Количество мест, шт: </div>
+                  <div class="product__card-right">3</div>
+                </li>
+                <li class="product__card-item">
+                  <div class="product__card-left">Мощность, л.с.</div>
+                  <div class="product__card-right">155</div>
+                </li>
+                <li class="product__card-item">
+                  <div class="product__card-left">Тип двигателя</div>
+                  <div class="product__card-right">Бензиновый</div>
+                </li>
+                <li class="product__card-item">
+                  <div class="product__card-left">Год выпуска</div>
+                  <div class="product__card-right">	2018</div>
+                </li>
+              </ul>
+              <a href="#" class="product__card-more">Показать еще</a>
+              <div class="product__card-btn">
+                <button>купить</button>
+              </div>
+            </div>
+            <div id="product-2" class="tabs__content product__card-tab-content"> Информация обновляется </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="card-tabs">
+  <div class="container">
+    <div class="tabs__wrapper">
+      <div class="tabs card-tab-box">
+        <a href="#product__card-tabs-1" class="tab card__tab">О товаре</a>
+        <a href="#product__card-tabs-2" class="tab card__tab">Характеристики</a>
+        <a href="#product__card-tabs-3" class="tab card__tab">Отзывы</a>
+        <a href="#product__card-tabs-4" class="tab card__tab tab--active">Самовывоз</a>
+        <a href="#product__card-tabs-5" class="tab card__tab">Доставка</a>
+        <a href="#product__card-tabs-6" class="tab card__tab">Cервис</a>
+        <a href="#product__card-tabs-7" class="tab card__tab">Гарантия</a>
+      </div>
+      <div class="tabs__container">
+        <div id="product__card-tabs-1" class="card-tab-content tabs__content"> Информация обновляется зопрос с сервира</div>
+        <div id="product__card-tabs-2" class="card-tab-content tabs__content"> Информация обновляется зопрос с сервира</div>
+        <div id="product__card-tabs-3" class="card-tab-content tabs__content"> Информация обновляется зопрос с сервира</div>
+        <div id="product__card-tabs-4" class="card-tab-content tabs__content tabs__content--active">
+          <form>
+            <div class="card__top-line">
+              <label class="card__label-search">Магазин
+              <input type="text" class="card__label-input">
+            </label>
+            <label class="card__label-pickup">
+              <input class="filter-stayle" type="radio" name="pickup">Забрать сегодня
+            </label>
+            <label class="card__label-pickup">
+              <input class="filter-stayle" type="radio" name="pickup" checked>Забрать в течение недели
+            </label>
+            </div>
+            <ul class="card__list">
+              <li class="card__list-item card__list-itemtitle">
+                <div class=" card__list-address">Адрес</div>
+                <div class=" card__list-workhourrs">Режим работы</div>
+                <div class=" card__list-avilable">Доступно</div>
+                <div class=" card__list-num">Количество</div>
+                <div class=" card__list-btn"></div>
+              </li>
+              <li class="card__list-item">
+                <div class="card__list-address">Москва, ул. Науки 25</div>
+                <div class="card__list-workhourrs">
+                  <div class="workhours">
+                    <span> пн-сб:</span>
+                    <span>08:00-19:00</span>
+                    </div>
+                  <div class="workhours">
+                    <span>вс:</span>
+                    <span>09:00-17:00</span>
+                  </div>
+                </div>
+                <div class="card__list-avilable">В наличии</div>
+                <div class="card__list-num">1</div>
+                <div class="card__list-btn">
+                  <button type="submit">КУПИТЬ</button>
+                </div>
+              </li>
+              <li class="card__list-item">
+                <div class="card__list-address">Москва, ул.  Южная 134</div>
+                <div class="card__list-workhourrs">
+                  <div class="workhours">
+                    <span> пн-сб:</span>
+                    <span>08:00-19:00</span>
+                    </div>
+                  <div class="workhours">
+                    <span>вс:</span>
+                    <span>09:00-17:00</span>
+                  </div>
+                </div>
+                <div class="card__list-avilable">В наличии</div>
+                <div class="card__list-num">2</div>
+                <div class="card__list-btn">
+                  <button type="submit">КУПИТЬ</button>
+                </div>
+              </li>
+              <li class="card__list-item">
+                <div class="card__list-address">Киев, ул Шевченко 167</div>
+                <div class="card__list-workhourrs">
+                  <div class="workhours">
+                    <span> пн-сб:</span>
+                    <span>08:00-19:00</span>
+                    </div>
+                  <div class="workhours">
+                    <span>вс:</span>
+                    <span>09:00-17:00</span>
+                  </div>
+                </div>
+                <div class="card__list-avilable">Нет в наличии</div>
+                <div class="card__list-num">0</div>
+                <div class="card__list-btn">
+                  <button type="submit">КУПИТЬ</button>
+                </div>
+              </li>
+              <li class="card__list-item">
+                <div class="card__list-address">Санкт-Петербург,<br>
+                  ул. Красная 19</div>
+                <div class="card__list-workhourrs">
+                  <div class="workhours">
+                    <span> пн-сб:</span>
+                    <span>08:00-19:00</span>
+                    </div>
+                  <div class="workhours">
+                    <span>вс:</span>
+                    <span>09:00-17:00</span>
+                  </div>
+                </div>
+                <div class="card__list-avilable">Нет в наличии</div>
+                <div class="card__list-num">0</div>
+                <div class="card__list-btn">
+                  <button type="submit">КУПИТЬ</button>
+                </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div id="product__card-tabs-5" class="card-tab-content tabs__content"> Информация обновляется зопрос с сервира</div>
+        <div id="product__card-tabs-6" class="card-tab-content tabs__content"> Информация обновляется зопрос с сервира</div>
+        <div id="product__card-tabs-7" class="card-tab-content tabs__content"> Информация обновляется зопрос с сервира</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="products">
+  <div class="container">
+    <div class="products__inner">
+      <h3 class="product__title">С этим товаром покупают </h3>
+      <div class="tabs__wrapper">
+        <div class="tabs products__tabs">
+          <a href="#popular__tab-1" class="tab tab--active products__tab">запчасти</a>
+          <a href="#popular__tab-2" class="tab products__tab">моторы</a>
+          <a href="#popular__tab-3" class="tab products__tab">шины</a>
+          <a href="#popular__tab-4" class="tab products__tab">электроника</a>
+          <a href="#popular__tab-5" class="tab products__tab">инструменты</a>
+          <a href="#popular__tab-6" class="tab products__tab">аксессуары</a>
+        </div>
+        <div class="tabs__container products__container">
+          <div id="popular__tab-1" class="tabs__content products__content tabs__content--active">
+            <div class="product__slider">
+              <div class="product__slider-item">
+                <div class="product__item-wrapper">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper product__item-not-available">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper product__item-not-available">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="popular__tab-2" class="tabs__content products__content">
+            <div class="product__slider">
+              <div class="product__slider-item">
+                <div class="product__item-wrapper">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper product__item-not-available">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper product__item-not-available">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+              <div class="product__slider-item">
+                <div class="product__item-wrapper">
+                  <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item product__item--sale">
+                  <p class="product__item-hover-text">посмотреть товар </p>
+                  <button class="product__item-favorite"></button>
+                  <img src="images/content/product-1.png" alt="" class="product__item-img">
+                  <h4 class="product__item-title">Водонепроницаемый Рюкзак</h4>
+                  <p class="price product__item-price">9 800 ₽</p>
+                  <p class="product__item-notify-text">нет в наличие  </p>
+                  <button class="product__item-basket">
+                    <img src="images/basket-white.svg" alt="">
+                  </button>
+                 </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="popular__tab-3" class="tabs__content products__content">slaider-3</div>
+          <div id="popular__tab-4" class="tabs__content products__content">slaider-4</div>
+          <div id="popular__tab-5" class="tabs__content products__content">slaider-5</div>
+          <div id="popular__tab-6" class="tabs__content products__content">slaider-6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

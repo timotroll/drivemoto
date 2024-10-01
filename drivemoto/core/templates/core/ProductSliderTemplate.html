@@ -1,0 +1,27 @@
+{% load static %}
+
+
+<div class="product__slider">
+    {% for product in products %}
+        <div class="product__slider-item">
+            <div class="product__item-wrapper">
+                <a href="#!" class="product__item-notify-link"><span>Сообщить о поступление</span></a>
+                <a href="#!" class="product__item">
+                    <p class="product__item-hover-text">посмотреть товар </p>
+                    <button class="product__item-favorite"></button>
+                    <img src="{{ product.image.url }}" alt="" class="product__item-img">
+                    <h4 class="product__item-title">{{ product.product.name }}</h4>
+                    <p class="price product__item-price">{{ product.price|floatformat:0 }} ₽</p>
+                    {% if product.quantity > 0 %}
+                        <p class="product__item-notify-text">В наличии</p>
+                    {% else %}
+                        <p class="product__item-notify-text">Нет в наличии</p>
+                    {% endif %}
+                    <button class="product__item-basket">
+                        <img src="{% static 'images/basket-white.svg' %}" alt="">
+                    </button>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>

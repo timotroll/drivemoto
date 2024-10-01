@@ -1,0 +1,79 @@
+
+{% extends "admin/change_form.html" %}
+{% load i18n static %}
+{% load custom_filters %}
+
+{% block content %}
+    <h1>{{ original }}</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            <fieldset class="module aligned">
+                <legend>{{ form.category.label_tag }}</legend>
+                <div>
+                    {{ form.category }}
+                </div>
+            </fieldset>
+
+            <fieldset class="module aligned">
+                <legend>{{ form.name.label_tag }}</legend>
+                <div>
+                    {{ form.name }}
+                </div>
+            </fieldset>
+
+            <fieldset class="module aligned">
+                <legend>{{ form.slug.label_tag }}</legend>
+                <div>
+                    {{ form.slug }}
+                </div>
+            </fieldset>
+
+            <fieldset class="module aligned">
+                <legend>{{ form.articul.label_tag }}</legend>
+                <div>
+                    {{ form.articul }}
+                </div>
+            </fieldset>
+
+            <fieldset class="module aligned">
+                <legend>{{ form.extentions.label_tag }}</legend>
+                <div>
+                    {{ form.extentions }}
+                </div>
+            </fieldset>
+
+            <!-- Динамические поля для характеристик -->
+            <div id="dynamic-characteristics">
+                {% for field in form %}
+                    {% if field.name|startswith:'characteristic_' %}
+                        <div>
+                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            {{ field }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div id="product-variants">
+                {% for inline_admin_formset in inline_admin_formsets %}
+                    <fieldset class="module aligned {{ inline_admin_formset.opts.verbose_name }}">
+                        <h2>{{ inline_admin_formset.opts.verbose_name_plural|capfirst }}</h2>
+                        {{ inline_admin_formset.management_form }}
+                        {% for inline_admin_form in inline_admin_formset.forms %}
+                            <div class="inline-related">
+                                {{ inline_admin_form }}
+                            </div>
+                        {% endfor %}
+                    </fieldset>
+                {% endfor %}
+            </div>
+
+        </div>
+
+        <div>
+            <button type="submit" class="default">Save</button>
+        </div>
+    </form>
+{% endblock %}
